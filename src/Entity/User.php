@@ -42,7 +42,7 @@ class User implements UserInterface, \Serializable
     private $isAuthor = false;
 
     /**
-     * @ORM\OneToMany(targetEntity="Article")
+     * @ORM\OneToMany(targetEntity="Article",mappedBy="Author")
      */
     private $articles;
 
@@ -191,4 +191,13 @@ class User implements UserInterface, \Serializable
     {
         return $this->password;
     }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
 }

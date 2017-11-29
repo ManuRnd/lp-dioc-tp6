@@ -38,7 +38,7 @@ class Article
     private $countView = 0;
 
     /**
-     * @ORM\OneToMany(targetEntity="Tag",inversedBy="tags")
+     * @ORM\ManyToMany(targetEntity="Tag")
      */
     private $tags;
     /**

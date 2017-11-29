@@ -20,6 +20,11 @@ class ArticleType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('content', TextareaType::class)
+           /* ->add('tags', EntityType::class, array(
+                'class'=>Tag::class,
+                'choice_label'=>true,
+                'expanded'=>true,
+            ))*/
             ->add('submit', SubmitType::class)
         ;
     }

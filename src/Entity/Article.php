@@ -29,7 +29,7 @@ class Article
      */
     private $content;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="User",inversedBy="articles")
      */
     private $author;
     /**

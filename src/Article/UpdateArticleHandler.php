@@ -12,5 +12,8 @@ class UpdateArticleHandler
     {
         // Slugify le titre et met à jour la date de mise à jour de l'article
         // Log également un article stat avec pour action update.
+        \App\Slug\SlugGenerator::class;
+        $sl=new SlugGenerator();
+        $article->setSlug($sl->generate($article->getTitle()));
     }
 }

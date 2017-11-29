@@ -42,7 +42,7 @@ class User implements UserInterface, \Serializable
     private $isAuthor = false;
 
     /**
-     * @ORM\OneToMany(targetEntity="Article",mappedBy="Author")
+     * @ORM\OneToMany(targetEntity="Article",mappedBy="author")
      */
     private $articles;
 
